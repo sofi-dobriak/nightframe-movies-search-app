@@ -1,0 +1,14 @@
+.movieList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.moviePoster {
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
