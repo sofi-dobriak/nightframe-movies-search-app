@@ -1,0 +1,69 @@
+.movieContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.moviePoster {
+  border: 1px solid var(--card-border-color);
+  border-radius: 4px;
+  max-width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.movieTextContainer {
+  p {
+    margin-bottom: 10px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.additionalTitle {
+  margin-bottom: 10px;
+}
+
+.additionalLinks {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.castLink,
+.reviewLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--button-bg-color);
+  min-width: 100px;
+  height: 30px;
+  transition: background-color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .movieContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .moviePoster {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .movieTextContainer {
+    p {
+      font-size: 14px;
+    }
+  }
+}

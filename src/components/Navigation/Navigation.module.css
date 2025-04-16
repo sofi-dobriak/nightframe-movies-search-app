@@ -2,12 +2,18 @@
   display: flex;
   align-items: center;
   gap: 30px;
-
   margin: 20px 0;
 }
 
-.link {}
+.link {
+  transition: color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
 
 .active {
-  color: red;
+  color: var(--active-color);
 }

@@ -3,6 +3,7 @@ import Container from './components/Container/Container';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import { lazy, Suspense } from 'react';
 import Navigation from './components/Navigation/Navigation';
+import Loader from './components/Loader/Loader';
 
 const Home = lazy(() => import('./pages/HomePage/HomePage'));
 const Movies = lazy(() => import('./pages/MoviesPage/MoviesPage'));
@@ -16,7 +17,7 @@ function App() {
             <Container>
                 <Navigation />
 
-                <Suspense fallback={<div>Loading page...</div>}>
+                <Suspense fallback={<Loader />}>
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/movies' element={<Movies />} />

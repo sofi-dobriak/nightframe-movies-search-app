@@ -1,0 +1,26 @@
+.reviewsContainer {
+  margin-bottom: 40px;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviewsItem {
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid var(--card-border-color);
+  transition: border-color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover-color);
+  }
+}
+
+.reviewsAuthor {
+  margin-bottom: 6px;
+  font-weight: 600;
+}

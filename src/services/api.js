@@ -20,8 +20,8 @@ const fetchMoviesData = async (endpoint, params = {}) => {
     }
 };
 
-export const fetchTrandMovies = () => {
-    return fetchMoviesData('/trending/movie/day');
+export const fetchTrandMovies = page => {
+    return fetchMoviesData('/trending/movie/day', { page });
 };
 
 export const fetchMoviesByKeyWords = query => {
