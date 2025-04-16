@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Container from './components/Container/Container';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import { lazy, Suspense } from 'react';

@@ -9,30 +9,9 @@ const MoviesPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    const getMoviesByKeyWords = async searchQuery => {
-        setIsLoading(true);
-        try {
-            const response = await fetchMoviesByKeyWords(searchQuery);
-            setSearchMovies(response.results);
-        } catch (error) {
-            setError(true);
-        } finally {
-            setIsLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        if (!query.trim()) return;
-        getMoviesByKeyWords(query);
-    }, [query]);
-
-    const handleSearch = newSearchQuery => {
-        setQuery(newSearchQuery);
-    };
-
     return (
         <>
-            <SearchForm handleSearch={handleSearch} />
+            <SearchForm />
             {isLoading && <p>Loading....</p>}
             {error && <p>Someting went wrong</p>}
             {searchMovies.length > 0 && <MoviesList movies={searchMovies} />}
