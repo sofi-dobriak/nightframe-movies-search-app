@@ -19,6 +19,7 @@
 
   &:hover,
   &:focus {
+    outline: none;
     border-color: var(--hover-color);
   }
 }
@@ -35,5 +36,18 @@
   &:hover,
   &:focus {
     background-color: var(--hover-color);
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    flex-direction: column;
+  }
+
+  .searchInput {
+    width: 100%;
+    min-width: unset;
   }
 }

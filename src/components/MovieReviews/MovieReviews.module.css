@@ -12,15 +12,34 @@
   border-radius: 4px;
   padding: 8px;
   border: 1px solid var(--card-border-color);
-  transition: border-color .3s ease-in-out;
+  cursor: pointer;
+  transition: border-color .3s ease-in-out, transform .3s ease-in-out;
 
   &:hover,
   &:focus {
     border-color: var(--hover-color);
+    transform: scale(1.03);
   }
 }
 
 .reviewsAuthor {
   margin-bottom: 6px;
   font-weight: 600;
+}
+
+.reviewsText {
+  max-width: 700px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modalText {
+  color: #000;
+}
+
+.modalAuthor {
+  font-weight: 600;
+  margin-bottom: 8px;
+
 }

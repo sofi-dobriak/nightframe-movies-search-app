@@ -15,11 +15,13 @@
   border: 1px solid var(--card-border-color);
   border-radius: 4px;
   min-width: 216px;
-  transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out, transform .3s ease-in-out;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     border-color: var(--hover-color);
+    transform: scale(1.03);
   }
 }
 
@@ -39,4 +41,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.modalImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 10px;
+  border-radius: 4px;
+}
+
+.modalText {
+  color: #000;
 }
