@@ -4,20 +4,23 @@ import { fetchMoviesByKeyWords } from '../../services/api';
 import MoviesList from '../../components/MovieList/MovieList';
 import Loader from '../../components/Loader/Loader';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
+import { useSearchParams } from 'react-router-dom';
 
 const MoviesPage = () => {
-    const [query, setQuery] = useState('');
     const [searchMovies, setSearchMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
     const [page, setPage] = useState(1);
     const [isEmpty, setIsEmpty] = useState(false);
     const [isVisibleMovies, setIsVisibleMovies] = useState(false);
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const query = searchParams.get('query') ?? '';
 
     useEffect(() => {
         if (!query) return;
 
-        const getMovie = async query => {
+        const getMovie = async () => {
             setIsLoading(true);
 
             try {
@@ -44,14 +47,22 @@ const MoviesPage = () => {
                 setIsLoading(false);
             }
         };
-        getMovie(query);
+        getMovie();
     }, [query, page]);
 
     const handleSearchSubmit = newQuery => {
-        setQuery(newQuery);
+        if (!newQuery) {
+            searchParams.delete('query');
+            return setSearchParams(searchParams);
+        }
+
+        searchParams.set('query', newQuery);
+        setSearchParams(searchParams);
+
         setSearchMovies([]);
         setError(false);
         setIsEmpty(false);
+        setPage(1);
     };
 
     const handleLoadMore = () => {

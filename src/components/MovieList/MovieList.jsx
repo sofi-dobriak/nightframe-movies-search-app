@@ -1,13 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './MovieList.module.css';
 import defaultImage from '../../assets/images/image-not-found.png';
 
 const MovieList = ({ movies }) => {
+    const location = useLocation();
+    console.log(location);
+
     return (
         <ul className={styles.movieList}>
             {movies.map(movie => (
                 <li key={movie.id} className={styles.movieItem}>
-                    <Link to={`/movies/${movie.id}`}>
+                    <Link state={location} to={`/movies/${movie.id}`}>
                         <img
                             className={styles.moviePoster}
                             src={

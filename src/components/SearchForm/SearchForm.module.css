@@ -8,7 +8,12 @@
   margin-bottom: 40px;
 }
 
+.inputWrapper {
+  position: relative;
+}
+
 .searchInput {
+
   min-width: 326px;
   padding: 16px 20px;
   color: inherit;
@@ -37,13 +42,20 @@
   &:focus {
     background-color: var(--hover-color);
   }
+}
 
-
+.error {
+  color: var(--error-color);
+  font-size: 12px;
+  position: absolute;
+  bottom: -22px;
+  left: 4px;
 }
 
 @media (max-width: 768px) {
   .searchForm {
     flex-direction: column;
+    gap: 28px;
   }
 
   .searchInput {

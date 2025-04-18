@@ -24,8 +24,8 @@ export const fetchTrandMovies = page => {
     return fetchMoviesData('/trending/movie/day', { page });
 };
 
-export const fetchMoviesByKeyWords = query => {
-    return fetchMoviesData('/search/movie', { query });
+export const fetchMoviesByKeyWords = (query, page = 1) => {
+    return fetchMoviesData('/search/movie', { query, page });
 };
 
 export const fetchMovieById = movie_id => {

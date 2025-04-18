@@ -49,6 +49,24 @@
   }
 }
 
+.goBackLinkContainer {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.goBackLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
+
 @media (max-width: 768px) {
   .movieContainer {
     display: flex;

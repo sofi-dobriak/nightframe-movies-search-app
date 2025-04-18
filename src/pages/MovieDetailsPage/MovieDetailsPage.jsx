@@ -1,14 +1,19 @@
-import { NavLink, Outlet, useParams } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import styles from './MovieDetailsPage.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { fetchMovieById } from '../../services/api';
 import Loader from '../../components/Loader/Loader';
 import defaultImage from '../../assets/images/image-not-found.png';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const MovieDetailsPage = () => {
     const { movieId } = useParams();
     const [movie, setMovie] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+
+    const location = useLocation();
+    const goBackRef = useRef(location.state ?? '/movies');
+    console.log(location);
 
     useEffect(() => {
         const getMovieById = async () => {
@@ -31,6 +36,12 @@ const MovieDetailsPage = () => {
 
             {!isLoading && (
                 <>
+                    <div className={styles.goBackLinkContainer}>
+                        <Link to={goBackRef.current} className={styles.goBackLink}>
+                            <IoMdArrowRoundBack />
+                            Go back to movies
+                        </Link>
+                    </div>
                     <div className={styles.movieContainer}>
                         <img
                             className={styles.moviePoster}
