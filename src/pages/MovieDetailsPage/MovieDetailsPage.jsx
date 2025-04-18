@@ -39,7 +39,7 @@ const MovieDetailsPage = () => {
                     <div className={styles.goBackLinkContainer}>
                         <Link to={goBackRef.current} className={styles.goBackLink}>
                             <IoMdArrowRoundBack />
-                            Go back to movies
+                            Go back
                         </Link>
                     </div>
                     <div className={styles.movieContainer}>
