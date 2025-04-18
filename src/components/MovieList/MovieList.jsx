@@ -4,7 +4,6 @@ import defaultImage from '../../assets/images/image-not-found.png';
 
 const MovieList = ({ movies }) => {
     const location = useLocation();
-    console.log(location);
 
     return (
         <ul className={styles.movieList}>
