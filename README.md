@@ -4,23 +4,19 @@ Movie Finder is a movie search application using The Movie Database API (TMDb). 
 
 ## 🔍 Functionality:
 
--   Search for movies by keywords
--   Movie detail page
--   Cast information
--   User reviews
--   Navigation saved on page refresh (React Router)
+- Search for movies by keywords
+- Movie detail page
+- Cast information
+- User reviews
+- Navigation saved on page refresh (React Router)
 
 ## ⚙️ Technologies:
 
--   React
--   React Router
--   Axios
--   React Suspense & Lazy
--   Vite
--   Yup
--   React icons
--   React modal
-
-## 🔗 Demo:
-
-[Open the app](https://goit-react-hw-05-pi-sandy.vercel.app/)
+- React
+- React Router
+- Axios
+- React Suspense & Lazy
+- Vite
+- Yup
+- React icons
+- React modal
