@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import styles from './NotFoundPage.module.css';
 import { useEffect } from 'react';
 
 const NotFoundPage = () => {
@@ -13,7 +12,7 @@ const NotFoundPage = () => {
     return () => clearTimeout(navigateId);
   }, [navigate]);
 
-  return <p className={styles.notFoundPage}>Not Found Page</p>;
+  return <p className='text-[var(--error-color)] text-center'>Not Found Page</p>;
 };
 
 export default NotFoundPage;

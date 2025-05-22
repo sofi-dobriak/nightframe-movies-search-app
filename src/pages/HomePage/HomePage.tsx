@@ -5,7 +5,7 @@ import MoviesListTitle from '../../components/MoviesListTitle/MoviesListTitle';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
 import Loader from '../../components/Loader/Loader';
 import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
-import { Movie } from '../../components/types/MovieType';
+import { Movie } from '../../types/MovieType';
 
 const HomePage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);

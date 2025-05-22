@@ -5,7 +5,7 @@ import MoviesList from '../../components/MovieList/MovieList';
 import Loader from '../../components/Loader/Loader';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
 import { useSearchParams } from 'react-router-dom';
-import { Movie } from '../../components/types/MovieType';
+import { Movie } from '../../types/MovieType';
 
 const MoviesPage = () => {
   const [searchMovies, setSearchMovies] = useState<Movie[]>([]);

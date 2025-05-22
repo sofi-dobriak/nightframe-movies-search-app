@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import styles from './Navigation.module.css';
 import { NavLink } from 'react-router-dom';
 
 interface NavigationProps {
@@ -8,10 +7,13 @@ interface NavigationProps {
 
 const Navigation = () => {
   const setActiveClass = ({ isActive }: NavigationProps) => {
-    return clsx(styles.link, isActive && styles.active);
+    return clsx(
+      'duration-300 ease-in-out hover:text-[var(--hover-color)] focus:text-[var(--hover-color)]',
+      isActive && 'text-[var(--active-color)]'
+    );
   };
   return (
-    <nav className={styles.navigation}>
+    <nav className='flex items-center gap-7.5 m-0 mt-5 mb-5'>
       <NavLink to='/' className={setActiveClass}>
         Home
       </NavLink>

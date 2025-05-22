@@ -1,6 +1,4 @@
-@import url(./reset.css);
-@import url(./modern-normalize.css);
-
+@import "tailwindcss";
 
 @font-face {
   font-display: swap;

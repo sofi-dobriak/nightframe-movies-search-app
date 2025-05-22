@@ -4,7 +4,7 @@ import {
   MovieDetailsRespose,
   MovieListResponse,
   ReviewsResponse,
-} from '../components/types/ApiResposeTypes';
+} from '../types/ApiResposeTypes';
 
 const fetchMoviesData = async <T>(endpoint: string, params = {}): Promise<T> => {
   const url = `https://api.themoviedb.org/3${endpoint}`;

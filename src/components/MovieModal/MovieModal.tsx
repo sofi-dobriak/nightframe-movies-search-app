@@ -1,7 +1,6 @@
 import Modal from 'react-modal';
 import type { Styles } from 'react-modal';
 import { IoMdClose } from 'react-icons/io';
-import styles from './MovieModal.module.css';
 import { ReactNode } from 'react';
 
 const customStyles: Styles = {
@@ -40,7 +39,10 @@ const MovieModal = ({ modalIsOpen, closeModal, children }: MovieModalProps) => {
   return (
     <div>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
-        <IoMdClose className={styles.closeButton} onClick={closeModal} />
+        <IoMdClose
+          onClick={closeModal}
+          className='absolute top-4 right-4 text-black text-2xl cursor-pointer duration-300 ease-in-out hover:text-[var(--hover-color)] focus:text-[var(--hover-color)]'
+        />
         {children}
       </Modal>
     </div>

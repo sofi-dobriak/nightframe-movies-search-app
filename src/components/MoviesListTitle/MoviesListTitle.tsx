@@ -1,7 +1,5 @@
-import styles from './MoviesListTitle.module.css';
-
 const MoviesListTitle = () => {
-    return <h1 className={styles.moviesListTitle}>Tranding today</h1>;
+  return <h1 className='text-center mb-10'>Tranding today</h1>;
 };
 
 export default MoviesListTitle;
