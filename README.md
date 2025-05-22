@@ -20,3 +20,4 @@ Movie Finder is a movie search application using The Movie Database API (TMDb). 
 - Yup
 - React icons
 - React modal
+- Tailwind
