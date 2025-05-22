@@ -8,11 +8,11 @@ import {
 
 const fetchMoviesData = async <T>(endpoint: string, params = {}): Promise<T> => {
   const url = `https://api.themoviedb.org/3${endpoint}`;
+  const ACCESS_KEY = import.meta.env.VITE_TMDb_KEY;
 
   const options = {
     headers: {
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YWUwNDVhZWE0MjNiNjExZTliODA1YTE0NDk3NTc0NiIsIm5iZiI6MTc0NDIwNTMwNy40NjQsInN1YiI6IjY3ZjY3NWZiMWJjNjM5NTY2YWQ5MWE4NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mGWPQrZmQzRhD36GndZZ4ljLv9L6c7ko4MdnQ6dwB4E',
+      Authorization: `Bearer ${ACCESS_KEY}`,
     },
     params: { language: 'en-US', ...params },
   };
