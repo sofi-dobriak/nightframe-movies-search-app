@@ -89,7 +89,7 @@ const MovieDetailsPage = () => {
             </div>
           </div>
 
-          <p className='mb-[10px] text-sm md:text-base'>Additional information:</p>
+          <p className='font-bold mb-[10px] text-sm md:text-base'>Additional information:</p>
           <nav className='flex gap-[16px] mb-[20px]'>
             <NavLink
               to='cast'
