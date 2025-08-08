@@ -21,3 +21,17 @@ Movie Finder is a movie search application using The Movie Database API (TMDb). 
 - React icons
 - React modal
 - Tailwind
+
+---
+
+## 💻 My other projects
+
+### 🔎📷 Lensea — search images app
+
+[Demo](https://lensea-search-images-ds0kw8wom-sofis-projects-f6b2a04f.vercel.app/) |
+[Github](https://github.com/sofi-dobriak/lensea-search-images-app)
+
+### 💫 Nexus — Phonebook App
+
+[Demo](https://nexus-phonebook-app.vercel.app/) |
+[Github](https://github.com/sofi-dobriak/nexus-phonebook-app)
